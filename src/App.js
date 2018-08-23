@@ -1,21 +1,20 @@
 import React, { Component } from "react";
+import logo from "./logo.svg";
 import "./App.css";
-import WeatherIcon from "./components/weatherIcon";
+import WeatherWidget from "./components/weatherWidget";
 
 class App extends Component {
-  state = {
-    data: {
-      temperature: 25,
-      humidity: 80,
-      sky: "sunny"
-    }
-  };
-
   render() {
     return (
       <div className="App">
-        <h1>olfwapp</h1>
-        <WeatherIcon sky="sunny" />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+        <WeatherWidget />
       </div>
     );
   }
